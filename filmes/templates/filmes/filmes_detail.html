@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Cadastrar Filme {% endblock %}
+
+{% block main %}
+<h1> Filme: {{ object.nome }}</h1>
+
+<p text-align: left> <b>Nome:</b> {{object.nome}}</p>
+<p align=”Left”> <b>Descrição:</b> {{object.descricao}}</p>
+<p align=”Left”> <b>url:</b> {{ object.url }}</p>
+<a href = {{ object.url}} > Clique ak para acessar o link da url </a>
+
+<center><a href = {% url 'filmes_update' filmes.pk%}> Alterar </a></center>
+<center><a href = {% url 'filmes_delete' filmes.pk%}> Deletar </a></center>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Alterar descrição {% endblock %}
+
+{% block main %}
+<form method="post">{% csrf_token %}
+   <ul> {{ form.as_p }}</ul>
+   <center> <input type="submit" value="Save"> </center>
+</form>
+
+{% endblock %}
